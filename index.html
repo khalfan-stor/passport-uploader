@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Passport & ID Upload</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+padding: 20px;
+background: #f0f4f8;
+}
+h1 {
+color: #1a73e8;
+}
+.container {
+background: white;
+padding: 20px;
+border-radius: 8px;
+display: inline-block;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+input[type="file"] {
+margin: 10px 0;
+}
+button {
+padding: 10px 20px;
+background-color: #1a73e8;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+button:hover {
+background-color: #0d5dc0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Welcome to Project Mohammed Khalfan</h1>
+<p>Please upload clear images for verification.</p>
+
+<form id="uploadForm">
+<label>Passport Image:</label><br>
+<input type="file" accept="image/*" capture="environment" required><br><br>
+
+<label>ID Card - Front:</label><br>
+<input type="file" accept="image/*" capture="environment" required><br><br>
+
+<label>ID Card - Back:</label><br>
+<input type="file" accept="image/*" capture="environment" required><br><br>
+
+<button type="submit">Send</button>
+</form>
+
+<p id="status" style="margin-top:20px;"></p>
+</div>
+
+<script>
+document.getElementById("uploadForm").addEventListener("submit", function(e) {
+e.preventDefault();
+document.getElementById("status").innerText = "✅ Sent successfully!";
+});
+</script>
+</body>
+</html>
